@@ -23,7 +23,7 @@ export const LogoTicker = () => {
             transition={{
               repeat: Infinity,
               repeatType: "loop",
-              duration: 40,
+              duration: 5,
               ease: 'linear',
             }}
             className="flex flex-nowrap gap-14 items-center"

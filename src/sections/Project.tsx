@@ -17,18 +17,24 @@ export const Project = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <ProjectCard
                     src={Images.src}
-                    title="Modern Next.js Portfolio"
+                    title="Tech Mastermind"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    githubLink="https://github.com/HimanshuS10/TechMasterMind-Website"
+                    websiteLink="https://techmastermind.ca/"
                 />
                 <ProjectCard
                     src={Images.src}
                     title="React Dashboard"
                     description="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                    githubLink="https://github.com/HimanshuS10/TechMasterMind-Website"
+                    websiteLink="https://techmastermind.ca/"
                 />
                 <ProjectCard
                     src={Images.src}
                     title="E-commerce Platform"
                     description="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                    githubLink="https://github.com/HimanshuS10/TechMasterMind-Website"
+                    websiteLink="https://techmastermind.ca/"
                 />
             </div>
         </div>
