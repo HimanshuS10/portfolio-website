@@ -8,6 +8,19 @@ import ProjectCard from "@/components/ProjectCard";
 import Image from "next/image";
 import Reactjs from '@/assets/React.png';
 import Images from '@/assets/image.png';
+import TechMasterMind from '@/assets/project/TechMasterMind.png';
+import ElfMail from '@/assets/project/ElfMail.png';
+// import TechMasterMindDemo from '@/assets/project/TechMasterMindDemo.mp4';
+
+// interface Props {
+//     src: string;
+//     title: string;
+//     description: string;
+//     longDescription: string;
+//     githubLink: string;
+//     websiteLink: string;
+//     technologies?: string[];
+//   }
 
 export const Project = () => {
     return (
@@ -16,18 +29,24 @@ export const Project = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <ProjectCard
-                    src={Images.src}
+                    src={TechMasterMind.src}
                     title="Tech Mastermind"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                     githubLink="https://github.com/HimanshuS10/TechMasterMind-Website"
                     websiteLink="https://techmastermind.ca/"
+                    technologies={["React", "Tailwind CSS", "JSON"]}
+                    longDescription={"Tech MasterMind a online website with success stories of software engineers around the world."}
+                    projectDemo="../src/assets/project/TechMasterMindDemo.mp4"
                 />
                 <ProjectCard
-                    src={Images.src}
+                    src={ElfMail.src}
                     title="React Dashboard"
                     description="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                     githubLink="https://github.com/HimanshuS10/TechMasterMind-Website"
                     websiteLink="https://techmastermind.ca/"
+                    technologies={["HTMl", "Tailwind CSS", "JavaScript", "EmailJS", "API"]}
+                    longDescription={"ElfMail is a online scrente santa name genetar."}
+                    projectDemo="../src/assets/project/TechMasterMindDemo.mp4"
                 />
                 <ProjectCard
                     src={Images.src}
@@ -35,6 +54,9 @@ export const Project = () => {
                     description="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
                     githubLink="https://github.com/HimanshuS10/TechMasterMind-Website"
                     websiteLink="https://techmastermind.ca/"
+                    technologies={["HTMl", "Tailwind CSS", "JavaScript", "EmailJS", "API"]}
+                    longDescription={"ElfMail is a online scrente santa name genetar."}
+                    projectDemo="../src/assets/project/TechMasterMindDemo.mp4"
                 />
             </div>
         </div>

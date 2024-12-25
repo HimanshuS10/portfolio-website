@@ -4,7 +4,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Website from "@/assets/website.png";
 import Github from "@/assets/github.png";
-import { Plus, X } from 'lucide-react';
+import { Plus, Video, X } from 'lucide-react';
 import { motion } from "framer-motion";
 
 interface Props {
@@ -15,9 +15,10 @@ interface Props {
   githubLink: string;
   websiteLink: string;
   technologies?: string[];
+  projectDemo: string;
 }
 
-const ProjectCard = ({ src, title, description, longDescription, githubLink, websiteLink, technologies }: Props) => {
+const ProjectCard = ({ src, title, description, longDescription, githubLink, websiteLink, technologies, projectDemo }: Props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
@@ -77,9 +78,9 @@ const ProjectCard = ({ src, title, description, longDescription, githubLink, web
               <X className="w-6 h-6" />
             </button>
             <h2 className="text-3xl font-bold mb-4 text-white">{title}</h2>
-            <Image
-              src={src}
-              alt={title}
+            <video
+              src={projectDemo}
+              controls
               width={1000}
               height={1000}
               className="w-full object-contain rounded-lg mb-4"
