@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import Website from "@/assets/website.png";
 import Github from "@/assets/github.png";
 import { Plus, X } from 'lucide-react';
+import { motion } from "framer-motion";
 
 interface Props {
   src: string;
@@ -60,8 +61,14 @@ const ProjectCard = ({ src, title, description, longDescription, githubLink, web
       </div>
 
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-[#03001417] border border-[#2A0E61] rounded-lg p-8 max-w-2xl w-full mx-4 relative overflow-hidden shadow-xl">
+        <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+          <motion.div
+            className="bg-[#03001417] border border-[#2A0E61] rounded-lg p-8 max-w-2xl w-full mx-4 relative overflow-hidden shadow-xl"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
             <button
               onClick={closeModal}
               className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors duration-200"
@@ -103,12 +110,12 @@ const ProjectCard = ({ src, title, description, longDescription, githubLink, web
                 href={githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-[#2A0E61] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#3A1F71] transition-colors duration-200"
+                className="inline-block bg-[#white] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#3A1F71] transition-colors duration-200"
               >
                 View on GitHub
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       )}
     </>
@@ -116,4 +123,3 @@ const ProjectCard = ({ src, title, description, longDescription, githubLink, web
 };
 
 export default ProjectCard;
-
