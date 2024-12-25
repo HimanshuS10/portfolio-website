@@ -2,8 +2,10 @@
 
 import { DotLottieCommonPlayer, DotLottiePlayer } from "@dotlottie/react-player";
 import productImage from "@/assets/product-image.png";
+import expand from "@/assets/expand.png";
 import { ComponentPropsWithoutRef, useEffect, useRef, useState } from "react";
 import { animate, motion, useMotionTemplate, useMotionValue, ValueAnimationTransition } from "framer-motion";
+import HeroContent from "./HeroContent";
 
 const tabs = [
   {
@@ -30,6 +32,14 @@ const tabs = [
     backgroundPositionY: 27,
     backgroundSizeX: 177,
   },
+  {
+    icon: "/assets/lottie/stars.lottie",
+    title: "Expand your reach",
+    isNew: false,
+    backgroundPositionX: 0,
+    backgroundPositionY: 0,
+    backgroundSizeX: 1000,
+  }
 ];
 
 const FeatureTab = (props: typeof tabs[number] & ComponentPropsWithoutRef<'div'> & { selected: boolean }) => {
@@ -72,7 +82,7 @@ const FeatureTab = (props: typeof tabs[number] & ComponentPropsWithoutRef<'div'>
   };
 
   return (
-    <motion.div 
+    <motion.div
       className={`border ${props.selected ? 'border-[#A369FF]' : 'border-white/15'} flex p-2.5 rounded-xl gap-2.5 items-center lg:flex-1 relative cursor-pointer`}
       onClick={props.onClick}
     >
@@ -89,10 +99,10 @@ const FeatureTab = (props: typeof tabs[number] & ComponentPropsWithoutRef<'div'>
 }
 
 export const Features = () => {
-  const [selectedTab, setSelectedTab] = useState(0);
-  const BackgroundPositionX = useMotionValue(tabs[0].backgroundPositionX);
-  const BackgroundPositionY = useMotionValue(tabs[0].backgroundPositionY);
-  const BackgroundSizeX = useMotionValue(tabs[0].backgroundSizeX);
+  const [selectedTab, setSelectedTab] = useState(-1); // -1 represents full image view
+  const BackgroundPositionX = useMotionValue(50);
+  const BackgroundPositionY = useMotionValue(50);
+  const BackgroundSizeX = useMotionValue(100);
 
   const backgroundPosition = useMotionTemplate`${BackgroundPositionX}% ${BackgroundPositionY}%`;
   const backgroundSize = useMotionTemplate`${BackgroundSizeX}% auto`;
@@ -100,39 +110,55 @@ export const Features = () => {
   const handleTabChange = (index: number) => {
     setSelectedTab(index);
 
-    animate(BackgroundPositionX, tabs[index].backgroundPositionX, {
-      duration: 0.5,
-      ease: "easeInOut"
-    });
-
-    animate(BackgroundPositionY, tabs[index].backgroundPositionY, {
-      duration: 0.5,
-      ease: "easeInOut"
-    });
-
-    animate(BackgroundSizeX, tabs[index].backgroundSizeX, {
-      duration: 0.5,
-      ease: "easeInOut"
-    });
+    if (index === -1) {
+      // Full image view
+      animate(BackgroundPositionX, 50, {
+        duration: 0.5,
+        ease: "easeInOut"
+      });
+      animate(BackgroundPositionY, 50, {
+        duration: 0.5,
+        ease: "easeInOut"
+      });
+      animate(BackgroundSizeX, 100, {
+        duration: 0.5,
+        ease: "easeInOut"
+      });
+    } else {
+      // Zoom to specific section
+      animate(BackgroundPositionX, tabs[index].backgroundPositionX, {
+        duration: 0.5,
+        ease: "easeInOut"
+      });
+      animate(BackgroundPositionY, tabs[index].backgroundPositionY, {
+        duration: 0.5,
+        ease: "easeInOut"
+      });
+      animate(BackgroundSizeX, tabs[index].backgroundSizeX, {
+        duration: 0.5,
+        ease: "easeInOut"
+      });
+    }
   }
 
   return (
-    <section className="py-20 md:py-24">
+    <section className="py-15 md:py-20">
       <div className="container">
         <h2 className="text-5xl md:text-6xl font-medium tracking-tighter text-center">Elevate your SEO efforts.</h2>
         <p className="text-white/70 text-lg md:text-xl md:max-w-2xl mx-auto tracking-tight text-center">From small startups to large companies, we help optimize your SEO strategy.</p>
         <div className="mt-10 flex flex-col lg:flex-row gap-3">
+
           {tabs.map((tab, tabIndex) => (
-            <FeatureTab 
+            <FeatureTab
               {...tab}
               selected={selectedTab === tabIndex}
-              onClick={() => handleTabChange(tabIndex)} 
-              key={tab.title} 
+              onClick={() => handleTabChange(tabIndex)}
+              key={tab.title}
             />
           ))}
         </div>
         <div className="border border-white/20 p-2.5 rounded-xl mt-3">
-          <motion.div 
+          <motion.div
             className="aspect-video bg-cover border border-white/20 rounded-lg"
             style={{
               backgroundPosition,

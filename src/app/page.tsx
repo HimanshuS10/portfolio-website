@@ -5,6 +5,9 @@ import { Features } from "@/sections/Features";
 import { Testimonials } from "@/sections/Testimonials";
 import { CallToAction } from "@/sections/CallToAction";
 import { Footer } from "@/sections/Footer";
+import StarBackground from "@/components/StarBackground";
+import {Project} from "@/sections/Project";
+import Resume  from "@/sections/Resume";
 
 export default function Home() {
   return (
@@ -13,7 +16,8 @@ export default function Home() {
       <Hero />
       <LogoTicker />
       <Features />
-      <Features />
+      <Project />
+      <Resume />
       <Testimonials />
       <CallToAction />
       <Footer />

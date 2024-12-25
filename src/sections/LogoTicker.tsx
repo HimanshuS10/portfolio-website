@@ -1,42 +1,40 @@
 'use client';
-import { Acme } from "next/font/google";
-import acmeLogo from "@/assets/logo-acme.png";
-import apexLogo from "@/assets/logo-apex.png";
-import celestiallogo from '@/assets/logo-celestial.png';
-import quantumLogo from '@/assets/logo-quantum.png';
-import pulseLogo from '@/assets/logo-pulse.png';
-import echoLogo from '@/assets/logo-echo.png';
 import { motion } from "framer-motion";
 import Java from '@/assets/Java.png';
 import Python from '@/assets/Python.png';
 import JavaScript from '@/assets/JavaScript.png';
 import Reactjs from '@/assets/React.png';
-import JSON from '@/assets/JSon.png';
 import Tailwind from '@/assets/Tailwind.png';
+import Cprogram from '@/assets/C.png';
+
+const logos = [Tailwind, Java, Cprogram, Reactjs, JavaScript, Python];
 
 export const LogoTicker = () => {
-  return <section className="py-20 md:py-24 bg-white">
-    <div className="container">
-      <div className="flex items-center gap-5">
-        <div className="flex-1 md:flex-none">
-          <h2>Programming Languages and Tools: </h2>
+  return (
+    <section className="py-20 md:py-24 overflow-hidden">
+      <div className="flex flex-col md:flex-row items-center gap-5 px-4 md:px-8">
+        <div className="w-full md:w-auto mb-4 md:mb-0 md:mx-auto">
+          <h2 className="text-xl md:text-2xl font-semibold whitespace-nowrap">Languages & <br /> Frameworks Experience:</h2>
         </div>
-        <div className="flex flex-1 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
-          <motion.div initial={{
-            translateX: '-50%',
-          }} animate={{
-            translateX: '0',
-          }} transition={{
-            repeat: Infinity,
-            duration: 20,
-            ease: 'linear',
-          }} className="flex flex-none gap-14 pr-14 -translate-x-1/2">
-            {[Tailwind, Java, JSON, Reactjs, JavaScript, Python, Tailwind, Java, JSON, Reactjs, JavaScript, Python,].map((logo, index) => (
-              <img key={index} src={logo.src} alt="logo" className="h-6 w-auto" />
+        <div className="w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
+          <motion.div
+            initial={{ x: '0%' }}
+            animate={{ x: '-50%' }}
+            transition={{
+              repeat: Infinity,
+              repeatType: "loop",
+              duration: 40,
+              ease: 'linear',
+            }}
+            className="flex flex-nowrap gap-14 items-center"
+          >
+            {[...logos, ...logos].map((logo, index) => (
+              <img key={index} src={logo.src} alt="logo" className="h-8 md:h-10 w-auto object-contain" />
             ))}
           </motion.div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  );
 };
+
