@@ -33,7 +33,6 @@ export const Hero = () => {
     >
       <div className="absolute inset-0 bg-[radial-gradient(75%_75%_at_center_center,rgba(70,144,255,0.5)_15%,rgba(14,0,36,0.5)_78%,transparent)]"></div>
 
-      {/* Fade-out overlay */}
       <div className="absolute inset-0 pointer-events-none" style={{
         background: `
           linear-gradient(to right, black, transparent 10%, transparent 90%, black),
@@ -99,9 +98,12 @@ export const Hero = () => {
         className="absolute h-[544px] w-[544px] md:h-[980px] md:w-[980px] rounded-full border-[3.5px] border-white/20 border-dotted top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
       ></motion.div>
 
-      <div className="container relative mt-16 z-0">
+      <div className="container relative mb-[200px] z-0">
         <h1 className="text-5xl md:text-8xl font-semibold tracking-tighter bg-blue-400 bg-[radial-gradient(100%_100%_at_top_left,white,rgb(74,32,138,.5))] text-transparent bg-clip-text text-center">
-          <span className=""> Hi, I'm Himanshu</span><br />{' '}
+          <span className="stroke-slate-400" style={{
+            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(0, 0, 0, 0.5)'
+          }}
+          > Hi, I'm Himanshu</span><br />{' '}
           <TypeAnimation
             sequence={[
               'FrontEnd Developer',
@@ -111,6 +113,9 @@ export const Hero = () => {
               'Software Developer',
               1400,
             ]}
+            style={{
+              textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(0, 0, 0, 0.5)'
+            }}
             wrapper="span"
             speed={50}
             repeat={Infinity}
