@@ -99,7 +99,7 @@ export const Hero = () => {
       ></motion.div>
 
       <div className="container relative mb-[200px] z-0">
-        <h1 className="text-5xl md:text-8xl font-semibold tracking-tighter bg-blue-400 bg-[radial-gradient(100%_100%_at_top_left,white,rgb(74,32,138,.5))] text-transparent bg-clip-text text-center">
+        <h1 className="text-5xl md:text-8xl text-white font-semibold tracking-tighter text-center">
           <span className="stroke-slate-400" style={{
             textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(0, 0, 0, 0.5)'
           }}

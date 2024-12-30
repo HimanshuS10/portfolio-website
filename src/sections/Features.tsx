@@ -39,10 +39,10 @@ const tabs = [
     backgroundPositionX: 0,
     backgroundPositionY: 0,
     backgroundSizeX: 1000,
-  }
+  },
 ];
 
-const FeatureTab = (props: typeof tabs[number] & ComponentPropsWithoutRef<'div'> & { selected: boolean }) => {
+const FeatureTab = (props: typeof tabs[number] & ComponentPropsWithoutRef<"div"> & { selected: boolean }) => {
   const tabRef = useRef<HTMLDivElement>(null);
   const dotLootieRef = useRef<DotLottieCommonPlayer>(null);
 
@@ -67,11 +67,11 @@ const FeatureTab = (props: typeof tabs[number] & ComponentPropsWithoutRef<'div'>
       repeat: Infinity,
       ease: "linear",
       repeatType: "loop",
-    }
+    };
 
     animate(xPercentage, [0, 100, 100, 0], options);
     animate(yPercentage, [0, 0, 100, 100, 0], options);
-  }, [])
+  }, []);
 
   const handleTabHover = () => {
     if (dotLootieRef.current === null) {
@@ -83,20 +83,25 @@ const FeatureTab = (props: typeof tabs[number] & ComponentPropsWithoutRef<'div'>
 
   return (
     <motion.div
-      className={`border ${props.selected ? 'border-[#A369FF]' : 'border-white/15'} flex p-2.5 rounded-xl gap-2.5 items-center lg:flex-1 relative cursor-pointer`}
+      className={`border ${
+        props.selected ? "border-[#2b60ff]" : "border-white/15"
+      } flex p-2.5 rounded-xl gap-2.5 items-center lg:flex-1 relative cursor-pointer`}
       onClick={props.onClick}
     >
       <div ref={tabRef} onMouseEnter={handleTabHover} className="h-12 w-12 border-white/15 rounded-lg inline-flex items-center justify-center">
         <DotLottiePlayer ref={dotLootieRef} src={props.icon} className="h-5 w-5" autoplay />
       </div>
-      <motion.div style={{
-        maskImage
-      }} className="absolute inset-0 -m-px rounded-xl border border-[#A369FF]"></motion.div>
+      <motion.div
+        style={{
+          maskImage,
+        }}
+        className="absolute inset-0 -m-px rounded-xl border border-[#2b60ff]"
+      ></motion.div>
       <div className="font-medium">{props.title}</div>
-      {props.isNew && <div className="text-xs rounded-full px-2 py-0.5 bg-[#8c44ff] font-semibold">new</div>}
+      {props.isNew && <div className="text-xs rounded-full px-2 py-0.5 bg-[#2b60ff] font-semibold">new</div>}
     </motion.div>
   );
-}
+};
 
 export const Features = () => {
   const [selectedTab, setSelectedTab] = useState(-1); // -1 represents full image view
@@ -114,40 +119,41 @@ export const Features = () => {
       // Full image view
       animate(BackgroundPositionX, 50, {
         duration: 0.5,
-        ease: "easeInOut"
+        ease: "easeInOut",
       });
       animate(BackgroundPositionY, 50, {
         duration: 0.5,
-        ease: "easeInOut"
+        ease: "easeInOut",
       });
       animate(BackgroundSizeX, 100, {
         duration: 0.5,
-        ease: "easeInOut"
+        ease: "easeInOut",
       });
     } else {
       // Zoom to specific section
       animate(BackgroundPositionX, tabs[index].backgroundPositionX, {
         duration: 0.5,
-        ease: "easeInOut"
+        ease: "easeInOut",
       });
       animate(BackgroundPositionY, tabs[index].backgroundPositionY, {
         duration: 0.5,
-        ease: "easeInOut"
+        ease: "easeInOut",
       });
       animate(BackgroundSizeX, tabs[index].backgroundSizeX, {
         duration: 0.5,
-        ease: "easeInOut"
+        ease: "easeInOut",
       });
     }
-  }
+  };
 
   return (
     <section className="py-15 md:py-20">
       <div className="container">
         <h2 className="text-5xl md:text-6xl font-medium tracking-tighter text-center">Elevate your SEO efforts.</h2>
-        <p className="text-white/70 text-lg md:text-xl md:max-w-2xl mx-auto tracking-tight text-center">From small startups to large companies, we help optimize your SEO strategy.</p>
+        <p className="text-white/70 text-lg md:text-xl md:max-w-2xl mx-auto tracking-tight text-center">
+          From small startups to large companies, we help optimize your SEO strategy.
+        </p>
         <div className="mt-10 flex flex-col lg:flex-row gap-3">
-
           {tabs.map((tab, tabIndex) => (
             <FeatureTab
               {...tab}
@@ -159,7 +165,7 @@ export const Features = () => {
         </div>
         <div className="border border-white/20 p-2.5 rounded-xl mt-3">
           <motion.div
-            className="aspect-video bg-cover border border-white/20 rounded-lg"
+            className="aspect-video bg-cover border border-white/20 rounded-lg max-h-screen md:h-[60vh] h-[50vh]"
             style={{
               backgroundPosition,
               backgroundSize,
@@ -171,4 +177,3 @@ export const Features = () => {
     </section>
   );
 };
-

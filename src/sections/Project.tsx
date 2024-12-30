@@ -1,25 +1,9 @@
-import avatar1 from "@/assets/avatar-1.png";
-import avatar2 from "@/assets/avatar-2.png";
-import avatar3 from "@/assets/avatar-3.png";
-import avatar4 from "@/assets/avatar-4.png";
-import productImage from "@/assets/product-image.png";
-import { div } from "framer-motion/client";
-import ProjectCard from "@/components/ProjectCard";
+import React from 'react';
+import ProjectCard from '@/components/ProjectCard';
 import Image from "next/image";
-import Reactjs from '@/assets/React.png';
-import Images from '@/assets/image.png';
 import TechMasterMind from '@/assets/project/TechMasterMind.png';
 import ElfMail from '@/assets/project/ElfMail.png';
-
-// interface Props {
-//     src: string;
-//     title: string;
-//     description: string;
-//     longDescription: string;
-//     githubLink: string;
-//     websiteLink: string;
-//     technologies?: string[];
-//   }
+// import VSCodeShortcuts from '@/assets/project/VSCodeShortcuts.png';
 
 export const Project = () => {
     return (
@@ -30,36 +14,37 @@ export const Project = () => {
                 <ProjectCard
                     src={TechMasterMind.src}
                     title="Tech MasterMind"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    description="An online platform showcasing success stories of software engineers worldwide."
                     githubLink="https://github.com/HimanshuS10/TechMasterMind-Website"
                     websiteLink="https://techmastermind.ca/"
                     technologies={["React", "Tailwind CSS", "JSON"]}
-                    longDescription={"Tech MasterMind a online website with success stories of software engineers around the world."}
-                    projectDemo="../src/assets/project/TechMasterMindDemo.mp4"
+                    longDescription="Tech MasterMind is an inspiring website that collects and presents success stories from software engineers around the globe. It aims to motivate and guide aspiring developers by sharing real-world experiences and career journeys."
+                    projectDemo="@/assets/project/TechMasterMindDemo.mp4"
                 />
                 <ProjectCard
                     src={ElfMail.src}
                     title="ElfMail"
-                    description="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                    githubLink="https://github.com/HimanshuS10/TechMasterMind-Website"
-                    websiteLink="https://techmastermind.ca/"
-                    technologies={["HTML", "Tailwind CSS", "JavaScript", "EmailJS", "API"]}
-                    longDescription={"ElfMail is a online scrente santa name genetar."}
-                    projectDemo="../src/assets/project/TechMasterMindDemo.mp4"
+                    description="A fun and interactive Secret Santa name generator for holiday gift exchanges."
+                    githubLink="https://github.com/HimanshuS10/ElfMail"
+                    websiteLink="https://elfmail.vercel.app/"
+                    technologies={["HTML", "Tailwind CSS", "JavaScript", "EmailJS"]}
+                    longDescription="ElfMail is a delightful online Secret Santa name generator. It simplifies the process of organizing holiday gift exchanges by randomly assigning participants and notifying them via email, adding a touch of magic to your festive celebrations."
+                    projectDemo="/assets/project/ElfMailDemo.mp4"
                 />
                 <ProjectCard
-                    src={Images.src}
+                    src={ElfMail.src}
                     title="VSCode Shortcuts Website"
-                    description="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-                    githubLink="https://github.com/HimanshuS10/TechMasterMind-Website"
-                    websiteLink="https://techmastermind.ca/"
-                    technologies={["HTML", "Tailwind CSS", "JavaScript", "EmailJS", "API"]}
-                    longDescription={"ElfMail is a online scrente santa name genetar."}
-                    projectDemo="../src/assets/project/TechMasterMindDemo.mp4"
+                    description="A comprehensive guide to Visual Studio Code keyboard shortcuts for enhanced productivity."
+                    githubLink="https://github.com/HimanshuS10/VSCodeShortcuts"
+                    websiteLink="https://vscode-shortcuts.vercel.app/"
+                    technologies={["React", "Tailwind CSS", "Next.js"]}
+                    longDescription="The VSCode Shortcuts Website is an invaluable resource for developers looking to boost their productivity in Visual Studio Code. It offers a user-friendly interface to explore and learn essential keyboard shortcuts, helping users navigate and code more efficiently."
+                    projectDemo="/assets/project/VSCodeShortcutsDemo.mp4"
                 />
             </div>
         </div>
     )
 };
 
+export default Project;
 

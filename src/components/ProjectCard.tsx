@@ -64,7 +64,7 @@ const ProjectCard = ({ src, title, description, longDescription, githubLink, web
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
           <motion.div
-            className="bg-[#03001417] border border-[#2A0E61] rounded-lg p-8 max-w-2xl w-full mx-4 relative overflow-hidden shadow-xl"
+            className="bg-[#03001417] border border-[#2A0E61] rounded-lg p-6 max-w-2xl w-full mx-4 relative overflow-hidden shadow-xl"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             exit={{ scale: 0 }}
@@ -72,49 +72,55 @@ const ProjectCard = ({ src, title, description, longDescription, githubLink, web
           >
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors duration-200"
+              className="absolute top-2 right-2 text-white hover:text-gray-300 transition-colors duration-200"
               aria-label="Close modal"
             >
               <X className="w-6 h-6" />
             </button>
-            <h2 className="text-3xl font-bold mb-4 text-white">{title}</h2>
-            <video
-              src={projectDemo}
-              controls
-              width={1000}
-              height={1000}
-              className="w-full object-contain rounded-lg mb-4"
-            />
-            <p className="text-gray-300 mb-6">{longDescription}</p>
-            <h3 className="text-xl font-semibold mb-2 text-white">Technologies Used:</h3>
-            <div className="flex flex-wrap gap-2 mb-6">
-              {technologies && technologies.length > 0 ? (
-                technologies.map((tech, index) => (
-                  <span key={index} className="px-3 py-1 bg-[#2A0E61] text-white rounded-full text-sm">
-                    {tech}
-                  </span>
-                ))
-              ) : (
-                <span className="text-gray-300">No technologies specified</span>
-              )}
-            </div>
-            <div className="flex gap-4">
-              <a
-                href={websiteLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-[#2A0E61] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#3A1F71] transition-colors duration-200"
-              >
-                Visit Website
-              </a>
-              <a
-                href={githubLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-[#white] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#3A1F71] transition-colors duration-200"
-              >
-                View on GitHub
-              </a>
+            <h2 className="text-2xl font-bold mb-3 text-white">{title}</h2>
+            <div className="flex flex-col md:flex-row gap-4">
+              <div className="md:w-1/2">
+                <video controls>
+                  <source src={projectDemo}
+                    width={1000}
+                    height={1000}
+                    className="w-full object-contain rounded-lg mb-3"
+                    type="video/mp4" />
+                </video>
+                <div className="flex gap-2 mb-3">
+                  <a
+                    href={websiteLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 bg-[#2A0E61] text-white px-4 py-2 rounded-full font-semibold hover:bg-[#3A1F71] transition-colors duration-200 text-center text-sm"
+                  >
+                    Visit Website
+                  </a>
+                  <a
+                    href={githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 bg-white text-[#2A0E61] px-4 py-2 rounded-full font-semibold hover:bg-gray-200 transition-colors duration-200 text-center text-sm"
+                  >
+                    View on GitHub
+                  </a>
+                </div>
+              </div>
+              <div className="md:w-1/2">
+                <p className="text-gray-300 mb-3 text-sm max-h-24 overflow-y-auto">{longDescription}</p>
+                <h3 className="text-lg font-semibold mb-2 text-white">Technologies:</h3>
+                <div className="flex flex-wrap gap-2">
+                  {technologies && technologies.length > 0 ? (
+                    technologies.map((tech, index) => (
+                      <span key={index} className="px-2 py-1 bg-[#2A0E61] text-white rounded-full text-xs">
+                        {tech}
+                      </span>
+                    ))
+                  ) : (
+                    <span className="text-gray-300 text-sm">No technologies specified</span>
+                  )}
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -124,3 +130,4 @@ const ProjectCard = ({ src, title, description, longDescription, githubLink, web
 };
 
 export default ProjectCard;
+
