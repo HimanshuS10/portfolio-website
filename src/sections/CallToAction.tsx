@@ -12,10 +12,10 @@ export const CallToAction = () => {
           backgroundImage: `url(${gridLines.src})`,
         }}></div>
         <div className="relative">
-          <h2 className="text-5xl md:text-6xl max-w-sm mx-auto tracking-tighter text-center">AI driven SEO for everyone.</h2>
+          <h2 className="text-5xl md:text-6xl max-w-sm mx-auto tracking-tighter text-center">Thank you.</h2>
           <p className="text-center md:text-xl max-w-xs mx-auto text-lg text-wite/70 px-4 mt-5 tracking-tight">Achileve clear implactful resultu wiytn t ethe cpmpleye</p>
           <div className="flex justify-center mt-8">
-            <Button>Join Waitin</Button>
+            <Button>Downloand Resume</Button>
           </div>
         </div>
       </div>

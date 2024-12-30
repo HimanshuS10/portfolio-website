@@ -10,7 +10,6 @@ import Reactjs from '@/assets/React.png';
 import Images from '@/assets/image.png';
 import TechMasterMind from '@/assets/project/TechMasterMind.png';
 import ElfMail from '@/assets/project/ElfMail.png';
-// import TechMasterMindDemo from '@/assets/project/TechMasterMindDemo.mp4';
 
 // interface Props {
 //     src: string;
@@ -30,7 +29,7 @@ export const Project = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <ProjectCard
                     src={TechMasterMind.src}
-                    title="Tech Mastermind"
+                    title="Tech MasterMind"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                     githubLink="https://github.com/HimanshuS10/TechMasterMind-Website"
                     websiteLink="https://techmastermind.ca/"
@@ -40,21 +39,21 @@ export const Project = () => {
                 />
                 <ProjectCard
                     src={ElfMail.src}
-                    title="React Dashboard"
+                    title="ElfMail"
                     description="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                     githubLink="https://github.com/HimanshuS10/TechMasterMind-Website"
                     websiteLink="https://techmastermind.ca/"
-                    technologies={["HTMl", "Tailwind CSS", "JavaScript", "EmailJS", "API"]}
+                    technologies={["HTML", "Tailwind CSS", "JavaScript", "EmailJS", "API"]}
                     longDescription={"ElfMail is a online scrente santa name genetar."}
                     projectDemo="../src/assets/project/TechMasterMindDemo.mp4"
                 />
                 <ProjectCard
                     src={Images.src}
-                    title="E-commerce Platform"
+                    title="VSCode Shortcuts Website"
                     description="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
                     githubLink="https://github.com/HimanshuS10/TechMasterMind-Website"
                     websiteLink="https://techmastermind.ca/"
-                    technologies={["HTMl", "Tailwind CSS", "JavaScript", "EmailJS", "API"]}
+                    technologies={["HTML", "Tailwind CSS", "JavaScript", "EmailJS", "API"]}
                     longDescription={"ElfMail is a online scrente santa name genetar."}
                     projectDemo="../src/assets/project/TechMasterMindDemo.mp4"
                 />
