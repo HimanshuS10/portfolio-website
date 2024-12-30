@@ -11,9 +11,9 @@ import Reactjs from '@/assets/React.png';
 
 const testimonials = [
   {
-    text: "“This product has completely transformed how I manage my projects and deadlines”",
-    name: "Sophia Perez",
-    title: "Director @ Quantum",
+    text: "'Highly motivated and was a great asset to our team. Demonstrated ability to learn new tech easily and deep dive into it to produce results. Also, has ability to explain IT to various audience levels. Highly recommend adding Himanshu to your team!'",
+    name: "Dan Austin",
+    title: "Manager @ Algoma Steel",
     avatarImg: avatar1,
   },
   {
