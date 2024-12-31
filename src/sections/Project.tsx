@@ -14,7 +14,7 @@ export const Project = () => {
                 <ProjectCard
                     src={TechMasterMind.src}
                     title="Tech MasterMind"
-                    description="An online platform showcasing success stories of software engineers worldwide."
+                    description="A website that shares inspiring stories of software engineers from around the world."
                     githubLink="https://github.com/HimanshuS10/TechMasterMind-Website"
                     websiteLink="https://techmastermind.ca/"
                     technologies={["React", "Tailwind CSS", "JSON"]}
@@ -24,7 +24,7 @@ export const Project = () => {
                 <ProjectCard
                     src={ElfMail.src}
                     title="ElfMail"
-                    description="A fun and interactive Secret Santa name generator for holiday gift exchanges."
+                    description="a Secret Santa name generator that randomly assigns gift recipients and sends the details via email."
                     githubLink="https://github.com/HimanshuS10/ElfMail"
                     websiteLink="https://elfmail.vercel.app/"
                     technologies={["HTML", "Tailwind CSS", "JavaScript", "EmailJS"]}
@@ -34,7 +34,7 @@ export const Project = () => {
                 <ProjectCard
                     src={ElfMail.src}
                     title="VSCode Shortcuts Website"
-                    description="A comprehensive guide to Visual Studio Code keyboard shortcuts for enhanced productivity."
+                    description="A system for staff to handle orders, bookings, and bills easily."
                     githubLink="https://github.com/HimanshuS10/VSCodeShortcuts"
                     websiteLink="https://vscode-shortcuts.vercel.app/"
                     technologies={["React", "Tailwind CSS", "Next.js"]}

@@ -2,7 +2,7 @@ import { Button } from "@/components/Button";
 import starsBg from "@/assets/stars.png";
 import gridLines from "@/assets/grid-lines.png";
 
-export const CallToAction = () => {
+export const Contact = () => {
   return <section id="contact" className="py-20 md:py-24">
     <div className="container">
       <div className="border border-white/15 py-24 rounded-xl overflow-hidden relative" style={{
@@ -12,10 +12,12 @@ export const CallToAction = () => {
           backgroundImage: `url(${gridLines.src})`,
         }}></div>
         <div className="relative">
-          <h2 className="text-5xl md:text-6xl max-w-sm mx-auto tracking-tighter text-center">Thank you.</h2>
-          <p className="text-center md:text-xl max-w-xs mx-auto text-lg text-wite/70 px-4 mt-5 tracking-tight">Achileve clear implactful resultu wiytn t ethe cpmpleye</p>
-          <div className="flex justify-center mt-8">
-            <Button>Downloand Resume</Button>
+          <h2 className="text-5xl md:text-6xl max-w-sm mx-auto tracking-tighter text-center">Contact Me</h2>
+          <div>
+            <p className="text-left md:text-xl max-w-xs mx-auto text-lg text-wite/70 px-4 mt-5 tracking-tight">himseervi@gmail.com</p>
+          </div>
+          <div>
+            <p className="text-left md:text-xl max-w-xs mx-auto text-lg text-wite/70 px-4 mt-5 tracking-tight">Himanshu Seervi</p>
           </div>
         </div>
       </div>

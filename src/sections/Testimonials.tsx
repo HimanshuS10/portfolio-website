@@ -16,33 +16,12 @@ const testimonials = [
     title: "Manager @ Algoma Steel",
     avatarImg: avatar1,
   },
-  {
-    text: "“These AI tools have completely revolutionized our SEO entire strategy overnight”",
-    name: "Jamie Lee",
-    title: "Founder @ Pulse",
-    avatarImg: avatar2,
-  },
-  {
-    text: "“The user interface is so intuitive and easy to use, it has saved us countless hours”",
-    name: "Alisa Hester",
-    title: "Product @ Innovate",
-    avatarImg: avatar3,
-  },
-  {
-    text: "“Our team's productivity has increased significantly since we started using this tool”",
-    name: "Alec Whitten",
-    title: "CTO @ Tech Solutions",
-    avatarImg: avatar4,
-  },
 ];
 
 export const Testimonials = () => {
   return <section className="py-20 md:py-24">
     <div className="container">
-      <h2 className="text-5xl md:text-6xl text-center tracking-tighter font-medium"></h2>
-      <p className="text-white/70 text-lg text-center mt-5 md:text-xl tracking-tight max-w-sm mx-auto">
-        Our revolutionized AI SEO tools have helped countless companies improve their SEO strategy and increase their productivity. But don't just take our word for it, hear what our customers have to say:
-      </p>
+      <h2 className="text-5xl md:text-6xl text-center tracking-tighter font-medium">Test</h2>
       <div className="overflow-hidden mt-10 [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
         <div className="flex gap-5">
           {testimonials.map(testimonial => (
