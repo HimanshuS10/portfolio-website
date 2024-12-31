@@ -26,7 +26,7 @@ const ProjectCard = ({ src, title, description, longDescription, githubLink, web
 
   return (
     <>
-      <div className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] flex flex-col">
+      <div className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] flex flex-col hover:shadow-md hover:shadow-blue-500 duration-150">
         <Image
           src={src}
           alt={title}
@@ -44,15 +44,15 @@ const ProjectCard = ({ src, title, description, longDescription, githubLink, web
           <div className="flex justify-between items-center mt-4">
             <div className="flex gap-4">
               <a href={websiteLink} target="_blank" rel="noopener noreferrer">
-                <img src={Website.src} alt="Website Link" className="h-7 w-7" />
+                <img src={Website.src} alt="Website Link" className="h-7 w-7 hover:opacity-70 duration-150" />
               </a>
               <a href={githubLink} target="_blank" rel="noopener noreferrer">
-                <img src={Github.src} alt="GitHub Link" className="h-7 w-7" />
+                <img src={Github.src} alt="GitHub Link" className="h-7 w-7 hover:opacity-70 duration-150" />
               </a>
             </div>
             <button
               onClick={openModal}
-              className="bg-[#2A0E61] rounded-full p-2 hover:bg-[#3A1F71] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#2A0E61]"
+              className="bg-[#2A0E61] rounded-full p-2 hover:bg-[#160b2b] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#2A0E61]"
               aria-label="Learn more about the project"
             >
               <Plus className="w-6 h-6 text-white" />

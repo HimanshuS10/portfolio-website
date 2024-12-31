@@ -9,6 +9,7 @@ import StarBackground from "@/components/StarBackground";
 import {Project} from "@/sections/Project";
 import Resume  from "@/sections/Resume";
 import About from "@/sections/About";
+import Experience  from "@/sections/Experience";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <LogoTicker />
       {/* <Features /> */}
       <About/>
+      <Experience/>
       <Project />
       <Resume />
       <Testimonials />

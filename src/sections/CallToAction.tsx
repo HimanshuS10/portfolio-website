@@ -3,7 +3,7 @@ import starsBg from "@/assets/stars.png";
 import gridLines from "@/assets/grid-lines.png";
 
 export const CallToAction = () => {
-  return <section className="py-20 md:py-24">
+  return <section id="contact" className="py-20 md:py-24">
     <div className="container">
       <div className="border border-white/15 py-24 rounded-xl overflow-hidden relative" style={{
         backgroundImage: `url(${starsBg.src})`,

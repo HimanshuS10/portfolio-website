@@ -7,7 +7,7 @@ import ElfMail from '@/assets/project/ElfMail.png';
 
 export const Project = () => {
     return (
-        <div className="container py-5">
+        <div id='project' className="container py-5">
             <h2 className="text-5xl md:text-6xl font-medium tracking-tighter text-center mb-10">My Projects.</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
