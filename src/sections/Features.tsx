@@ -165,7 +165,7 @@ export const Features = () => {
         </div>
         <div className="border border-white/20 p-2.5 rounded-xl mt-3">
           <motion.div
-            className="aspect-video bg-cover border border-white/20 rounded-lg max-h-screen md:h-[60vh] h-[50vh]"
+            className="aspect-video bg-cover border border-white/20 rounded-lg max-h-screen md:h-[60vh]"
             style={{
               backgroundPosition,
               backgroundSize,

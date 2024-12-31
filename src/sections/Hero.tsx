@@ -98,7 +98,7 @@ export const Hero = () => {
         className="absolute h-[544px] w-[544px] md:h-[980px] md:w-[980px] rounded-full border-[3.5px] border-white/20 border-dotted top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
       ></motion.div>
 
-      <div className="container relative mb-[200px] z-0">
+      <div className="container relative mb-[200px] max-md:mt-60 z-0">
         <h1 className="text-5xl md:text-8xl text-white font-semibold tracking-tighter text-center">
           <span className="stroke-slate-400" style={{
             textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(0, 0, 0, 0.5)'

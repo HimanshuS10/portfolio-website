@@ -39,7 +39,7 @@ const testimonials = [
 export const Testimonials = () => {
   return <section className="py-20 md:py-24">
     <div className="container">
-      <h2 className="text-5xl md:text-6xl text-center tracking-tighter font-medium">Beyond Expectations</h2>
+      <h2 className="text-5xl md:text-6xl text-center tracking-tighter font-medium"></h2>
       <p className="text-white/70 text-lg text-center mt-5 md:text-xl tracking-tight max-w-sm mx-auto">
         Our revolutionized AI SEO tools have helped countless companies improve their SEO strategy and increase their productivity. But don't just take our word for it, hear what our customers have to say:
       </p>

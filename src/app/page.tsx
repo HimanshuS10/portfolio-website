@@ -8,6 +8,7 @@ import { Footer } from "@/sections/Footer";
 import StarBackground from "@/components/StarBackground";
 import {Project} from "@/sections/Project";
 import Resume  from "@/sections/Resume";
+import About from "@/sections/About";
 
 export default function Home() {
   return (
@@ -15,7 +16,8 @@ export default function Home() {
       <Header />
       <Hero />
       <LogoTicker />
-      <Features />
+      {/* <Features /> */}
+      <About/>
       <Project />
       <Resume />
       <Testimonials />
