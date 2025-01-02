@@ -14,10 +14,14 @@ export const Contact = () => {
         <div className="relative">
           <h2 className="text-5xl md:text-6xl max-w-sm mx-auto tracking-tighter text-center">Contact Me</h2>
           <div>
-            <p className="text-left md:text-xl max-w-xs mx-auto text-lg text-wite/70 px-4 mt-5 tracking-tight">himseervi@gmail.com</p>
+            <p className="text-center md:text-xl max-w-xs mx-auto text-lg text-white/70 px-4 mt-5 tracking-tight">
+              Email: <a href="mailto:hseervi@uoguelph.ca" className="text-blue-500 hover:underline">hseervi@uoguelph.ca</a>
+            </p>
           </div>
           <div>
-            <p className="text-left md:text-xl max-w-xs mx-auto text-lg text-wite/70 px-4 mt-5 tracking-tight">Himanshu Seervi</p>
+            <p className="text-center md:text-xl max-w-xs mx-auto text-lg text-white/70 px-4 mt-5 tracking-tight">
+              LinkedIn: <a href="https://www.linkedin.com/in/himanshu-seervi/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Himanshu Seervi</a>
+            </p>
           </div>
         </div>
       </div>
