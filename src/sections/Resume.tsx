@@ -1,10 +1,9 @@
 import Image from 'next/image';
 import resumeImage from '@/assets/Resume.png'; // Adjust the path as needed
-import resumePDF from '@/assets/Resume.png'; // Adjust the path as needed
 
 const Resume = () => {
     return (
-        <section id='resume' className="py-20">
+        <section id="resume" className="py-20">
             <div className="container mx-auto px-4">
                 <h2 className="text-4xl font-bold mb-8 text-center text-white">My Resume</h2>
                 <div className="max-w-2xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
@@ -20,8 +19,8 @@ const Resume = () => {
                 </div>
                 <div className="p-4 text-center">
                     <a
-                        href={resumePDF.src} // Path to your PDF file
-                        download="My_Resume.pdf" // Suggested file name for download
+                        href="/assets/HimanshuSeervi_Resume.pdf" // Correct path for the public folder
+                        download="HimanshuSeervi_Resume.pdf" // Suggested file name for download
                         className="inline-block bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
                     >
                         Download Resume
@@ -33,4 +32,3 @@ const Resume = () => {
 };
 
 export default Resume;
-

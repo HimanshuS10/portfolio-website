@@ -126,7 +126,9 @@ export const Hero = () => {
           I&apos;m a passionate second-year software engineering student at the University of Guelph.
         </p>
         <div className="flex justify-center mt-5">
-          <Button>Get Started &rarr;</Button>
+          <a href="#about">
+            <Button>Get Started &rarr;</Button>
+          </a>
         </div>
       </div>
     </motion.section>
