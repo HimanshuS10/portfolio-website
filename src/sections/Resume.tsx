@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import resumeImage from '@/assets/resume.png'; // Adjust the path as needed
-import resumePDF from '@/assets/resume.png'; // Adjust the path as needed
+import resumeImage from '@/assets/Resume.png'; // Adjust the path as needed
+import resumePDF from '@/assets/Resume.png'; // Adjust the path as needed
 
 const Resume = () => {
     return (

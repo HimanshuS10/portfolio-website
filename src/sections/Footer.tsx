@@ -1,4 +1,4 @@
-import Logo from "@/assets/logo.png";
+import Logo from "@/assets/Logo.png";
 import XSocial from '@/assets/social-x.svg';
 import InstaSocial from '@/assets/social-instagram.svg';
 import YTSocial from '@/assets/social-youtube.svg';
