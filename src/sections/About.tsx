@@ -10,7 +10,7 @@ export default function AboutPage() {
                         <div className="md:w-1/2 md:pr-8 mb-8 md:mb-0">
                             <h1 className="text-3xl md:text-4xl font-medium tracking-tighter text-left mb-5">About Us</h1>
                             <p className="text-white/70">
-                                Hi, I'm Himanshu Seervi, I'm second-year Software Engineering student at the University of Guelph. With almost a year of experience in web design and development at <a href="https://guelphentrepreneurshipsociety.com/" className='underline decoration-blue-500 hover:underline hover:decoration-blue-800 duration-150'> Guelph Entrepreneurship Society</a>, and an additional four months focused on developing <a href="https://www.aveva.com/en/products/aveva-pi-vision/" className='underline decoration-blue-500 hover:underline hover:decoration-blue-800 duration-150'>PI Vision</a> Data Interface Web Application at <a href="https://algoma.com/" className='underline decoration-blue-500 hover:underline hover:decoration-blue-800 duration-150'>Algoma Steel</a>, I’ve honed my skills in crafting innovative and efficient digital solutions.
+                                Hi, I&apos;m Himanshu Seervi, I&apos;m a second-year Software Engineering student at the University of Guelph. With almost a year of experience in web design and development at <a href="https://guelphentrepreneurshipsociety.com/" className='underline decoration-blue-500 hover:underline hover:decoration-blue-800 duration-150'> Guelph Entrepreneurship Society</a>, and an additional four months focused on developing <a href="https://www.aveva.com/en/products/aveva-pi-vision/" className='underline decoration-blue-500 hover:underline hover:decoration-blue-800 duration-150'>PI Vision</a> Data Interface Web Application at <a href="https://algoma.com/" className='underline decoration-blue-500 hover:underline hover:decoration-blue-800 duration-150'>Algoma Steel</a>, I&apos;ve honed my skills in crafting innovative and efficient digital solutions.
                             </p>
                             <p className="text-white/70 mt-4">
                                 Beyond academics and work, I am an entrepreneur and the founder of <a href="https://techmastermind.ca/" className='underline decoration-blue-500 hover:underline hover:decoration-blue-800 duration-150'> Tech MasterMind</a>, an online blogging platform. Tech MasterMind is dedicated to showcasing the success stories and inspiring journeys of accomplished software engineers. By sharing their challenges, lessons, and triumphs, the platform aims to motivate and guide aspiring engineers to reach their full potential.
@@ -31,4 +31,3 @@ export default function AboutPage() {
         </div>
     )
 }
-

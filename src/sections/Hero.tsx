@@ -103,7 +103,7 @@ export const Hero = () => {
           <span className="stroke-slate-400" style={{
             textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(0, 0, 0, 0.5)'
           }}
-          > Hi, I'm Himanshu</span><br />{' '}
+          > Hi, I&apos;m Himanshu</span><br />{' '}
           <TypeAnimation
             sequence={[
               'FrontEnd Developer',
@@ -123,7 +123,7 @@ export const Hero = () => {
           />
         </h1>
         <p className="text-lg text-white/70 mt-5 text-center">
-          I'm a passionate second-year software engineering student at the University of Guelph.
+          I&apos;m a passionate second-year software engineering student at the University of Guelph.
         </p>
         <div className="flex justify-center mt-5">
           <Button>Get Started &rarr;</Button>
@@ -132,4 +132,3 @@ export const Hero = () => {
     </motion.section>
   );
 };
-
