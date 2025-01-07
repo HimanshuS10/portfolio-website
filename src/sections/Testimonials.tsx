@@ -8,7 +8,7 @@ import ProjectCard from "@/components/ProjectCard";
 import Image from "next/image";
 import Reactjs from '@/assets/React.png';
 
-
+// Not used 
 const testimonials = [
   {
     text: "'Highly motivated and was a great asset to our team. Demonstrated ability to learn new tech easily and deep dive into it to produce results. Also, has ability to explain IT to various audience levels. Highly recommend adding Himanshu to your team!'",
