@@ -24,6 +24,7 @@ export default function AboutPage() {
                                 height={400}
                                 className="rounded-lg shadow-md"
                             />
+                            
                         </div>
                     </div>
                 </div>

@@ -2,6 +2,7 @@ import { Button } from "@/components/Button";
 import starsBg from "@/assets/stars.png";
 import gridLines from "@/assets/grid-lines.png";
 
+// Contact Page
 export const Contact = () => {
   return <section id="contact" className="py-20 md:py-24">
     <div className="container">
