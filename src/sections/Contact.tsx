@@ -24,6 +24,11 @@ export const Contact = () => {
               LinkedIn: <a href="https://www.linkedin.com/in/himanshu-seervi/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Himanshu Seervi</a>
             </p>
           </div>
+          <div>
+            <p className="text-center md:text-xl max-w-xs mx-auto text-lg text-white/70 px-4 mt-5 tracking-tight">
+              GitHub: <a href="https://github.com/HimanshuS10" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">HimanshuS10</a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
